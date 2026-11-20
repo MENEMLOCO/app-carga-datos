@@ -1,6 +1,6 @@
 /* Guarda la app en la tablet para que abra sin conexión.
    Al subir una versión nueva, cambiá VERSION para que las tablets la descarguen. */
-const VERSION = 'extrusion-v1';
+const VERSION = 'extrusion-v2';
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
 
 self.addEventListener('install', e => {

@@ -258,6 +258,16 @@ table.tight{min-width:760px}
 .regtable th.newcol{color:var(--primary-ink);background:var(--primary-soft)}
 .regtable td{white-space:nowrap;font-variant-numeric:tabular-nums;max-width:320px;overflow:hidden;text-overflow:ellipsis}
 .regtable tbody tr{cursor:default}
+.maqname{font-weight:650;font-size:1rem;white-space:nowrap}
+.sync{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--ink-2);white-space:nowrap;max-width:320px;overflow:hidden;text-overflow:ellipsis}
+.sdot{width:8px;height:8px;border-radius:50%;flex:none;background:var(--line-2)}
+.sdot.ok{background:var(--ok)}.sdot.warn{background:var(--warn)}.sdot.bad{background:var(--bad)}
+.gear{min-width:40px;min-height:40px;border-radius:8px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);font-size:1.15rem;cursor:pointer}
+.gear[aria-current="page"]{border-color:var(--primary);color:var(--primary);background:var(--primary-soft)}
+.cfg{max-width:640px;width:100%;margin:0 auto}
+.cfg .field input{font-size:1rem;font-weight:500;font-family:inherit}
+.cfgmsg{font-weight:600;color:var(--ink)}
+.qrwait{width:clamp(96px,14vw,136px);aspect-ratio:1;border:2px dashed #bbb;border-radius:6px;display:grid;place-items:center;text-align:center;font-size:.68rem;color:#666;padding:8px;line-height:1.3}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#2B2D35;color:#fff;padding:12px 18px;border-radius:8px;font-weight:600;font-size:.92rem;z-index:20;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);max-width:90%}
 .notes{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
 .notes h3{font-size:1rem;margin:0 0 6px}
@@ -2579,7 +2589,7 @@ var qrcode = function() {
 
 </script>
 <script>
-const ROWS = [{"Id. de producto de pedido": "802UT00000hTvgT", "Potencial retraso ext": null, "Días para fecha límite ext": 29, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 1, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11910, "Cuenta": "MUKEAT (H2-16)", "Medidas de bobina": "55/60", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "94 - Plata #921050 || Dosificador: 10 (Master al 10%) || PREPARAR: 5.2 Kg", "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || FUELLE 10 (10 + 35 + 10) - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 370, "Peso por bobina": 23.18, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF10BD(color) (1)", "ID": "802UT00000hTvgT", "Kg a extrudar": 69.54, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 69.54, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000fDJ6s", "Potencial retraso ext": "Posible retraso", "Días para fecha límite ext": 7, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 2, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11634, "Cuenta": "PUERTO BLEST (F2-19)", "Medidas de bobina": "50/80", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - - - - -", "Cantidad de bobinas": 4, "Metros por bobina": 278, "Peso por bobina": 21.08, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA RIÑÓN - BCLRADC (1)", "ID": "802UT00000fDJ6s", "Kg a extrudar": 84.32, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 84.32, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 4}, {"Id. de producto de pedido": "802UT00000fkath", "Potencial retraso ext": null, "Días para fecha límite ext": 0, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 3, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11687, "Cuenta": "DA CLUB (G2-1)", "Medidas de bobina": "45/60", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPOSICION || - Cambió el espesor, pasa de 80 micrones a 60 micrones - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 367, "Peso por bobina": 18.79, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE CON ADHESIVO COMÚN - BCLS5ACADC (1)", "ID": "802UT00000fkath", "Kg a extrudar": 56.37, "Record ID": "802UT00000IQ0oQYAT", "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 56.37, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gEPo0", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 4, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11766, "Cuenta": "ALASKA (H2-2)", "Medidas de bobina": "45/80", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": "3 - 1000 gr (BLANCO 911222-SX) || Dosificador: 20 (ENVÍOS) || PREPARAR: 0 Kg", "Tratado": "verdadero", "Comentarios": "|| - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 367, "Peso por bobina": 24.86, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE CON ADHESIVO COMÚN - BCLS5ACADC (1)", "ID": "802UT00000gEPo0", "Kg a extrudar": 74.58, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 74.58, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gXQ0L", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 10, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11824, "Cuenta": "MATERIALES ROSSI EL TUNEL (B6-8)", "Medidas de bobina": "40/85", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPOSICION || - - - - -", "Cantidad de bobinas": 13, "Metros por bobina": 389, "Peso por bobina": 24.84, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFBDRCO (2)", "ID": "802UT00000gXQ0L", "Kg a extrudar": 322.92, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 322.92, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 13}, {"Id. de producto de pedido": "802UT00000gUE2K", "Potencial retraso ext": null, "Días para fecha límite ext": -46281, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 11, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11818, "Cuenta": "HC MATERIALES (B1-14)", "Medidas de bobina": "40/90", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - - - - -", "Cantidad de bobinas": 4, "Metros por bobina": 333, "Peso por bobina": 22.59, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFBDRCO (1)", "ID": "802UT00000gUE2K", "Kg a extrudar": 90.36, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 90.36, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 4}, {"Id. de producto de pedido": "802UT00000gXG7S", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 12, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11823, "Cuenta": "CALERA PUEYRREDON (B3-2)", "Medidas de bobina": "43/80", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPO CON MODIFICACIONES -> Otros (ver coment. del Vendedor) || - OJO!!!:LLEVA TACO CIEGO. - - - -", "Cantidad de bobinas": 10, "Metros por bobina": 372, "Peso por bobina": 24.11, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFBDRCO (2)", "ID": "802UT00000gXG7S", "Kg a extrudar": 241.1, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 241.1, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 10}, {"Id. de producto de pedido": "802UT00000gusta", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 13, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11864, "Cuenta": "FERRETERIA NUEVA LACROZE GIA (B4-12)", "Medidas de bobina": "45/90", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPOSICION || - - - - -", "Cantidad de bobinas": 5, "Metros por bobina": 289, "Peso por bobina": 22.1, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFBDRCO (2)", "ID": "802UT00000gusta", "Kg a extrudar": 110.5, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 110.5, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 5}, {"Id. de producto de pedido": "802UT00000gK1Xd", "Potencial retraso ext": null, "Días para fecha límite ext": -46281, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 20, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11782, "Cuenta": "CORRALON MCS ()", "Medidas de bobina": "43/85", "Tipo de material": "BAJA DENSIDAD RECUPERADO NEGRO", "Aditivo + Dosificación": null, "Tratado": "falso", "Comentarios": "PRODUCTO NUEVO || - MICROPERFORADO!! - - - - LISAS", "Cantidad de bobinas": 20, "Metros por bobina": 356, "Peso por bobina": 24.46, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFMPBDRN", "ID": "802UT00000gK1Xd", "Kg a extrudar": 489.2, "Record ID": "802UT00000HIEHGYA5", "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 489.2, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 20}, {"Id. de producto de pedido": "802UT00000fQVTc", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 21, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11650, "Cuenta": "MATERIALES ROMERO (H2-14)", "Medidas de bobina": "40/85", "Tipo de material": "BAJA DENSIDAD RECUPERADO CARAMELO", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "|| - - - - -", "Cantidad de bobinas": 9, "Metros por bobina": 370, "Peso por bobina": 23.68, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFBDRCA (1)", "ID": "802UT00000fQVTc", "Kg a extrudar": 213.12, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 213.12, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 9}, {"Id. de producto de pedido": "802UT00000gk4TT", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 29, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11841, "Cuenta": "ROTISERIA VERA (F1-8)", "Medidas de bobina": "40/45", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "|| FUELLE 8 (8 + 24 + 8) - - - - -", "Cantidad de bobinas": 2, "Metros por bobina": 556, "Peso por bobina": 18.91, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF8BDC (1)", "ID": "802UT00000gk4TT", "Kg a extrudar": 37.82, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 37.82, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 2}, {"Id. de producto de pedido": "802UT00000gaFy2", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 30, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11827, "Cuenta": "MOLAY (B7-3)", "Medidas de bobina": "45/65", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "|| FUELLE 10 (10 + 25 + 10) - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 370, "Peso por bobina": 20.5, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF10BDC (1)", "ID": "802UT00000gaFy2", "Kg a extrudar": 61.5, "Record ID": "802UT00000IePS1YAN", "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 61.5, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gaFy1", "Potencial retraso ext": null, "Días para fecha límite ext": 4, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 31, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11826, "Cuenta": "MOLAY (B7-3)", "Medidas de bobina": "65/65", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPOSICION || FUELLE 15 (15 + 35 + 15) - - - - -", "Cantidad de bobinas": 4, "Metros por bobina": 283, "Peso por bobina": 22.84, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF15BDC (1)", "ID": "802UT00000gaFy1", "Kg a extrudar": 91.36, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 91.36, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 4}, {"Id. de producto de pedido": "802UT00000gKIyJ", "Potencial retraso ext": "Posible retraso", "Días para fecha límite ext": 10, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 32, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11786, "Cuenta": "FORMA RUGS (F1-6)", "Medidas de bobina": "60/85", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPOSICION || FUELLE 10 (10 + 40 + 10) - - Impresión CONTINUA - - -", "Cantidad de bobinas": 3, "Metros por bobina": 193, "Peso por bobina": 18.88, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOBINA - BBF10BDC (1)", "ID": "802UT00000gKIyJ", "Kg a extrudar": 56.64, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 56.64, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gkoT4", "Potencial retraso ext": "Posible retraso", "Días para fecha límite ext": 14, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 33, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11846, "Cuenta": "LAS JUANAS (H4-17)", "Medidas de bobina": "45/60", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "3 - 1000 gr (BLANCO 911222-SX) || Dosificador: 20 (ENVÍOS) || PREPARAR: 0 Kg", "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 389, "Peso por bobina": 19.89, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBDB (1)", "ID": "802UT00000gkoT4", "Kg a extrudar": 59.67, "Record ID": "802UT00000I4BsAYAV", "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 59.67, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gGvJv", "Potencial retraso ext": null, "Días para fecha límite ext": 20, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 34, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11776, "Cuenta": "COCOFIT WEAR ()", "Medidas de bobina": "55/60", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "3 - 1000 gr (BLANCO 911222-SX) || Dosificador: 20 (ENVÍOS) || PREPARAR: 0 Kg", "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 373, "Peso por bobina": 23.36, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBDB (1)", "ID": "802UT00000gGvJv", "Kg a extrudar": 70.08, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 70.08, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gM8y7", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 35, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11790, "Cuenta": "CALO (B7-8)", "Medidas de bobina": "60/85", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "3 - 1000 gr (BLANCO 911222-SX) || Dosificador: 20 (ENVÍOS) || PREPARAR: 0 Kg", "Tratado": "verdadero", "Comentarios": "|| - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 187, "Peso por bobina": 18.27, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBDB (1)", "ID": "802UT00000gM8y7", "Kg a extrudar": 54.81, "Record ID": null, "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 54.81, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gGWTa", "Potencial retraso ext": "Posible retraso", "Días para fecha límite ext": 9, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 36, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11773, "Cuenta": "PETITE AFFAIR S.A. (H4-16)", "Medidas de bobina": "50/60", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "35 - 930 gr (BLANCO 911222-SX) + 70 gr (YUTE 1802205-S) || Dosificador: 30 (ENVÍOS) || PREPARAR: 11.5 Kg", "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 367, "Peso por bobina": 20.87, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBD(color) (1)", "ID": "802UT00000gGWTa", "Kg a extrudar": 62.61, "Record ID": "802UT00000J3pw2YAB", "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 62.61, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gGWTb", "Potencial retraso ext": "Posible retraso", "Días para fecha límite ext": 9, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 37, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11774, "Cuenta": "PETITE AFFAIR S.A. (H4-16)", "Medidas de bobina": "60/60", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "26 A - 400 gr (BLANCO 911222-SX) + 200 gr (GRIS 991010-M) + 100 gr (VERDE MANZANA 1702702-S) + 300 gr (YUTE 1802291-S) || Dosificador: 30 (ENVÍOS) || PREPARAR: 14 Kg", "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - Corroborar que el verde #26 salga como la carpeta de extendidos que tiene el color vison!! - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 370, "Peso por bobina": 25.29, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBD(color) (1)", "ID": "802UT00000gGWTb", "Kg a extrudar": 75.87, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 75.87, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000geKXk", "Potencial retraso ext": "Posible retraso", "Días para fecha límite ext": 13, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 38, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11833, "Cuenta": "INTERSER (H4-15)", "Medidas de bobina": "45/60", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "8 - 156 gr (NEGRO 192894-AA) + 750 gr (BLANCO 911222-SX) + 94 gr (AZUL 961515) || Dosificador: 30 (ENVÍOS) || PREPARAR: 10.6 Kg", "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - - - - Tinta poco diluida! -", "Cantidad de bobinas": 3, "Metros por bobina": 376, "Peso por bobina": 19.25, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBD(color) (1/1)", "ID": "802UT00000geKXk", "Kg a extrudar": 57.75, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 57.75, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gfORC", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 40, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11838, "Cuenta": "SANITARIOS SANTUCHO (C3-18)", "Medidas de bobina": "50/25", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": "2 - 1000 gr (BLANCO 911222-SX) || Dosificador: 10 (Master al 10%) || PREPARAR: 5.3 Kg", "Tratado": "verdadero", "Comentarios": "REPOSICION || FUELLE 10 (10 + 30 + 10) - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 993, "Peso por bobina": 23.46, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF10ADB (2)", "ID": "802UT00000gfORC", "Kg a extrudar": 70.38, "Record ID": null, "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 70.38, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000gfORB", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 41, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11837, "Cuenta": "SANITARIOS SANTUCHO (C3-18)", "Medidas de bobina": "60/25", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": "2 - 1000 gr (BLANCO 911222-SX) || Dosificador: 10 (Master al 10%) || PREPARAR: 3.8 Kg", "Tratado": "verdadero", "Comentarios": "REPOSICION || FUELLE 10 (10 + 40 + 10) - - - - -", "Cantidad de bobinas": 2, "Metros por bobina": 889, "Peso por bobina": 25.29, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF10ADB (2)", "ID": "802UT00000gfORB", "Kg a extrudar": 50.58, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 50.58, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 2}, {"Id. de producto de pedido": "802UT00000guduX", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 42, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11863, "Cuenta": "SANITARIOS SIONE (B4-13)", "Medidas de bobina": "40/25", "Tipo de material": "ALTA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPOSICION || FUELLE 8 (8 + 24 + 8) - FUELLE 8 (8+24+8) - - - -", "Cantidad de bobinas": 9, "Metros por bobina": 1235, "Peso por bobina": 23.23, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF8ADRCO (2)", "ID": "802UT00000guduX", "Kg a extrudar": 209.07, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 209.07, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 9}, {"Id. de producto de pedido": "802UT00000gqMds", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 50, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11855, "Cuenta": "OGGI ZAPATOS (F2-3)", "Medidas de bobina": "58/60", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "3 - 1000 gr (BLANCO 911222-SX) || Dosificador: 20 (ENVÍOS) || PREPARAR: 0 Kg", "Tratado": "verdadero", "Comentarios": "|| - - - - -", "Cantidad de bobinas": 8, "Metros por bobina": 375, "Peso por bobina": 24.75, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBDB (1)", "ID": "802UT00000gqMds", "Kg a extrudar": 198.0, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 198.0, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 8}, {"Id. de producto de pedido": "802UT00000gqMdt", "Potencial retraso ext": "Posible retraso", "Días para fecha límite ext": 16, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 51, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11856, "Cuenta": "OGGI ZAPATOS (F2-3)", "Medidas de bobina": "76/60", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "3 - 1000 gr (BLANCO 911222-SX) || Dosificador: 20 (ENVÍOS) || PREPARAR: 0 Kg", "Tratado": "verdadero", "Comentarios": "REPOSICION || - - - - -", "Cantidad de bobinas": 4, "Metros por bobina": 278, "Peso por bobina": 24.26, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBDB (1)", "ID": "802UT00000gqMdt", "Kg a extrudar": 97.04, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 97.04, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 4}, {"Id. de producto de pedido": "802UT00000gvI1P", "Potencial retraso ext": null, "Días para fecha límite ext": 20, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 52, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11866, "Cuenta": "CORE BARRITAS ()", "Medidas de bobina": "45/80", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": "24 A - 100 gr (BLANCO 911222-SX) + 100 gr (GRIS 991010-M) + 200 gr (VERDE 971350) + 100 gr (YUTE 1802291-S) || Dosificador: 30 (ENVÍOS) || PREPARAR: 27.9 Kg", "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - - - - Tinta poco diluida! -", "Cantidad de bobinas": 6, "Metros por bobina": 370, "Peso por bobina": 25.11, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIAD(color) (1)", "ID": "802UT00000gvI1P", "Kg a extrudar": 150.66, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 150.66, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 6}, {"Id. de producto de pedido": "802UT00000gvI1Q", "Potencial retraso ext": null, "Días para fecha límite ext": 20, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 53, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11867, "Cuenta": "CORE BARRITAS ()", "Medidas de bobina": "45/80", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": "24 A - 100 gr (BLANCO 911222-SX) + 100 gr (GRIS 991010-M) + 200 gr (VERDE 971350) + 100 gr (YUTE 1802291-S) || Dosificador: 30 (ENVÍOS) || PREPARAR: 14.2 Kg", "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - - - - Tinta poco diluida! -", "Cantidad de bobinas": 3, "Metros por bobina": 376, "Peso por bobina": 25.48, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIAD(color) (1)", "ID": "802UT00000gvI1Q", "Kg a extrudar": 76.44, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 76.44, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000h2isF", "Potencial retraso ext": null, "Días para fecha límite ext": 18, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 54, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11870, "Cuenta": "MATISA (A7-18)", "Medidas de bobina": "60/50", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPO CON MODIFICACIONES -> Material || FUELLE 14 (14 + 32 + 14) - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 385, "Peso por bobina": 22.02, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF14BDRCO (1)", "ID": "802UT00000h2isF", "Kg a extrudar": 66.06, "Record ID": null, "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 66.06, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000h2isG", "Potencial retraso ext": null, "Días para fecha límite ext": 18, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 55, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11871, "Cuenta": "MATISA (A7-18)", "Medidas de bobina": "40/50", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPO CON MODIFICACIONES -> Material || FUELLE 8 (8 + 24 + 8) - - - - -", "Cantidad de bobinas": 6, "Metros por bobina": 602, "Peso por bobina": 22.66, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF8BDRCO (1)", "ID": "802UT00000h2isG", "Kg a extrudar": 135.96, "Record ID": "802UT00000HMFzXYAX", "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 135.96, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 6}, {"Id. de producto de pedido": "802UT00000h2isH", "Potencial retraso ext": null, "Días para fecha límite ext": 18, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 56, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11872, "Cuenta": "MATISA (A7-18)", "Medidas de bobina": "40/80", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPO CON MODIFICACIONES -> Recorte de clisés (ver print) || - - - - -", "Cantidad de bobinas": 16, "Metros por bobina": 417, "Peso por bobina": 25.05, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFBDRCO (1)", "ID": "802UT00000h2isH", "Kg a extrudar": 400.8, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 400.8, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 16}, {"Id. de producto de pedido": "802UT00000h9MoX", "Potencial retraso ext": null, "Días para fecha límite ext": 18, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 57, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11882, "Cuenta": "BONIATO (H2-5)", "Medidas de bobina": "50/45", "Tipo de material": "BAJA DENSIDAD RECUPERADO CRISTAL", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPOSICION || FUELLE 12 (12 + 26 + 12) - - - - -", "Cantidad de bobinas": 2, "Metros por bobina": 556, "Peso por bobina": 23.64, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF12BDRC (1)", "ID": "802UT00000h9MoX", "Kg a extrudar": 47.28, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 47.28, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 2}, {"Id. de producto de pedido": "802UT00000hN99w", "Potencial retraso ext": "Posible retraso", "Días para fecha límite ext": 28, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 58, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11894, "Cuenta": "HEIDI CLAIR (C6-4)", "Medidas de bobina": "60/65", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - Reutiliza clisé: medida 32x4 cm / Dejar muestras del producto - - - -", "Cantidad de bobinas": 4, "Metros por bobina": 317, "Peso por bobina": 23.48, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "ERROR - FPERBDC (1)", "ID": "802UT00000hN99w", "Kg a extrudar": 93.92, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 93.92, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 4}, {"Id. de producto de pedido": "802UT00000gtvod", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 59, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11861, "Cuenta": "HEIDI CLAIR (C6-4)", "Medidas de bobina": "59/85", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "3 - 1000 gr (BLANCO 911222-SX) || Dosificador: 20 (ENVÍOS) || PREPARAR: 0 Kg", "Tratado": "verdadero", "Comentarios": "|| - - - - -", "Cantidad de bobinas": 5, "Metros por bobina": 224, "Peso por bobina": 21.41, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBDB (1)", "ID": "802UT00000gtvod", "Kg a extrudar": 107.05, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 107.05, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 5}, {"Id. de producto de pedido": "802UT00000go0xX", "Potencial retraso ext": null, "Días para fecha límite ext": 28, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 60, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11851, "Cuenta": "AIETA ()", "Medidas de bobina": "45/60", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": "89 - BORDÓ #951700 (ref \"ARLEO\") || Dosificador: 30 (ENVÍOS) || PREPARAR: 10.6 Kg", "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || - - - - -", "Cantidad de bobinas": 3, "Metros por bobina": 376, "Peso por bobina": 19.25, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIBD(color) (1)", "ID": "802UT00000go0xX", "Kg a extrudar": 57.75, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 57.75, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000hQgis", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 65, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11900, "Cuenta": "MAURY (B5-7)", "Medidas de bobina": "41/90", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "|| - - - - -", "Cantidad de bobinas": 4, "Metros por bobina": 361, "Peso por bobina": 25.05, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFBDRCO (1)", "ID": "802UT00000hQgis", "Kg a extrudar": 100.2, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 100.2, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 4}, {"Id. de producto de pedido": "802UT00000hUqej", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 66, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11911, "Cuenta": "CORRALON CIUDADELA (B5-15)", "Medidas de bobina": "43/85", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPOSICION || - \"FABRICAR NO MENOS DE ESTA CANTIDAD\"!!!!CONTROLAR BIEN LA COSTURA - (REEMPLAZO DE PRODUCTO FALLADO) - - - -", "Cantidad de bobinas": 4, "Metros por bobina": 361, "Peso por bobina": 24.84, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFBDRCO (2)", "ID": "802UT00000hUqej", "Kg a extrudar": 99.36, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 99.36, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 4}, {"Id. de producto de pedido": "802UT00000hRhzN", "Potencial retraso ext": null, "Días para fecha límite ext": -46281, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 67, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11903, "Cuenta": "DIDACTIKIDS (CABALLITO) ()", "Medidas de bobina": "70/70", "Tipo de material": "ALTA DENSIDAD RECUPERADO BLANCO", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "PRODUCTO NUEVO || FUELLE 7 (7 + 56 + 7) - PRODUCCION PARA STOCK. - FUELLE 7 (7 + 56 + 7) - - - -", "Cantidad de bobinas": 1, "Metros por bobina": 200, "Peso por bobina": 18.91, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFRF7ADRB (4)", "ID": "802UT00000hRhzN", "Kg a extrudar": 18.91, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 18.91, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 1}, {"Id. de producto de pedido": "802UT00000hRQIg", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 68, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11902, "Cuenta": "SANITARIOS FRANCO (B2-2)", "Medidas de bobina": "40/25", "Tipo de material": "ALTA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPOSICION || FUELLE 8 (8 + 24 + 8) - FUELLE 6CM (8+24+8) - HACER CON ALTA DENSIDAD RECUPERADO BLANCO, Y SI NO HAY, USAR ALTA CRISTAL + MASTER BLANCO - - - -", "Cantidad de bobinas": 1, "Metros por bobina": 1111, "Peso por bobina": 20.96, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF8ADRCO (1)", "ID": "802UT00000hRQIg", "Kg a extrudar": 20.96, "Record ID": "802UT00000IPmf4YAD", "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 20.96, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 1}, {"Id. de producto de pedido": "802UT00000ewd5B", "Potencial retraso ext": null, "Días para fecha límite ext": -46281, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": null, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11602, "Cuenta": "PUERTO DULCE (STOCK) (B4-1)", "Medidas de bobina": "70/50", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": null, "Tratado": "falso", "Comentarios": "PRODUCTO NUEVO || FUELLE 17 (17 + 36 + 17) - FUELLE 17(F17+36+F17).CONFECCIONA ALOHA CON TROQUEL C/OJAL DE Ancho:22 cm,largo de manija:20 cm. - - - - LISAS", "Cantidad de bobinas": 9, "Metros por bobina": 370, "Peso por bobina": 24.73, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF17ADC", "ID": "802UT00000ewd5B", "Kg a extrudar": 222.57, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 222.57, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 9}, {"Id. de producto de pedido": "802UT00000ewd5C", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": null, "Lugar de extrusión (prueba)": "RODOFELLI", "N° de partida": 11603, "Cuenta": "PUERTO DULCE (STOCK) (B4-1)", "Medidas de bobina": "70/50", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": null, "Tratado": "falso", "Comentarios": "REPOSICION || FUELLE 17 (17 + 36 + 17) - FUELLE 17(F17+36+F17).CONFECCIONA ALOHA CON TROQUEL C/OJAL DE Ancho:22 cm,largo de manija:20 cm.\"PARA PRODUCIR\". - - - - LISAS", "Cantidad de bobinas": 9, "Metros por bobina": 370, "Peso por bobina": 24.73, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF17ADC", "ID": "802UT00000ewd5C", "Kg a extrudar": 222.57, "Record ID": "802UT00000GkINKYA3", "Result": "OK", "Timestamp": "2025-04-30 17:38", "KG RESTANTES A EXTRUDAR": 222.57, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 9}, {"Id. de producto de pedido": "802UT00000h7G49", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 2, "Lugar de extrusión (prueba)": "VENUS", "N° de partida": 11880, "Cuenta": "TIENDA DE AROMAS SRL (A5-14)", "Medidas de bobina": "30/100", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "|| - - - - -", "Cantidad de bobinas": 7, "Metros por bobina": 397, "Peso por bobina": 22.29, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CON ASAS LARGAS - BCLAFLBDC (1)", "ID": "802UT00000h7G49", "Kg a extrudar": 156.03, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 0.0, "Cantidad de bobinas extrudadas": 7, "BOBINAS RESTANTES": 0}, {"Id. de producto de pedido": "802UT00000hD7HS", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 3, "Lugar de extrusión (prueba)": "VENUS", "N° de partida": 11892, "Cuenta": "TIENDA DE AROMAS SRL (A5-14)", "Medidas de bobina": "36/120", "Tipo de material": "BAJA DENSIDAD CRISTAL - 207", "Aditivo + Dosificación": null, "Tratado": "falso", "Comentarios": "|| - - - - - LISAS", "Cantidad de bobinas": 3, "Metros por bobina": 256, "Peso por bobina": 20.81, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOBINA - BBDC", "ID": "802UT00000hD7HS", "Kg a extrudar": 62.43, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 62.43, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 3}, {"Id. de producto de pedido": "802UT00000h2umv", "Potencial retraso ext": null, "Días para fecha límite ext": 18, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 4, "Lugar de extrusión (prueba)": "VENUS", "N° de partida": 11873, "Cuenta": "ACRILASER (E1-19)", "Medidas de bobina": "25/80", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPO CON MODIFICACIONES -> Color de tinta || - - - - -", "Cantidad de bobinas": 2, "Metros por bobina": 558, "Peso por bobina": 20.87, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE CON ADHESIVO COMÚN - BCLS5ACADC (1)", "ID": "802UT00000h2umv", "Kg a extrudar": 41.74, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 41.74, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 2}, {"Id. de producto de pedido": "802UT00000h6q81", "Potencial retraso ext": null, "Días para fecha límite ext": 22, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 4, "Lugar de extrusión (prueba)": "VENUS", "N° de partida": 11879, "Cuenta": "GOLDEN LUXURY (B10-5)", "Medidas de bobina": "25/80", "Tipo de material": "ALTA DENSIDAD CRISTAL", "Aditivo + Dosificación": "6 - 700 gr (NEGRO 192894-AA) + 250 gr (BLANCO 911222-SX) + 50 gr (AZUL 961515) || Dosificador: 30 (ENVÍOS) || PREPARAR: 0 Kg", "Tratado": "verdadero", "Comentarios": "REPOSICION || - OJO! la producción pasada se confundieron y hicieron bolsas troquel en vez de adhesivo, porfi revisar - - - -", "Cantidad de bobinas": 4, "Metros por bobina": 556, "Peso por bobina": 20.77, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "SOBRE DE ENVÍO - BCLS5AIAD(color) (2)", "ID": "802UT00000h6q81", "Kg a extrudar": 83.08, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 83.08, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 4}, {"Id. de producto de pedido": "802UT00000hRQIf", "Potencial retraso ext": null, "Días para fecha límite ext": -46286, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 6, "Lugar de extrusión (prueba)": "VENUS", "N° de partida": 11901, "Cuenta": "SANITARIOS FRANCO (B2-2)", "Medidas de bobina": "30/25", "Tipo de material": "ALTA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "REPO CON MODIFICACIONES -> Otros (ver coment. del Vendedor) || FUELLE 6 (6 + 18 + 6) - FUELLE 6 (6 + 18 + 6) - - - -", "Cantidad de bobinas": 1, "Metros por bobina": 1111, "Peso por bobina": 15.72, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CAMISETA - BCAF6ADRCO (1)", "ID": "802UT00000hRQIf", "Kg a extrudar": 15.72, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 15.72, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 1}, {"Id. de producto de pedido": "802UT00000hA2Ks", "Potencial retraso ext": null, "Días para fecha límite ext": null, "Pendiente de extrusión": "VERDADERO", "Orden de extrusión": 7, "Lugar de extrusión (prueba)": "VENUS", "N° de partida": 11886, "Cuenta": "CASA RIVARA (B3-5)", "Medidas de bobina": "32/45", "Tipo de material": "BAJA DENSIDAD RECUPERADO COLOR", "Aditivo + Dosificación": null, "Tratado": "verdadero", "Comentarios": "|| - - - - -", "Cantidad de bobinas": 2, "Metros por bobina": 556, "Peso por bobina": 15.13, "Fecha INICIO Extrusión": null, "Fecha FIN Extrusión": null, "Producto - Código": "BOLSA CORTE DE FONDO - BCFBDRCO (2)", "ID": "802UT00000hA2Ks", "Kg a extrudar": 30.26, "Record ID": null, "Result": null, "Timestamp": null, "KG RESTANTES A EXTRUDAR": 30.26, "Cantidad de bobinas extrudadas": 0, "BOBINAS RESTANTES": 2}];
+let ROWS = (() => { try { return JSON.parse(localStorage.getItem('cache-pendientes')) || []; } catch (e) { return []; } })();
 const K = {id:'Id. de producto de pedido', ret:'Potencial retraso ext', dias:'Días para fecha límite ext', pend:'Pendiente de extrusión', orden:'Orden de extrusión', lugar:'Lugar de extrusión (prueba)', partida:'N° de partida', cuenta:'Cuenta', med:'Medidas de bobina', mat:'Tipo de material', adit:'Aditivo + Dosificación', trat:'Tratado', com:'Comentarios', cant:'Cantidad de bobinas', metros:'Metros por bobina', peso:'Peso por bobina', ini:'Fecha INICIO Extrusión', fin:'Fecha FIN Extrusión', prod:'Producto - Código', sfid:'ID', kg:'Kg a extrudar', rec:'Record ID', res:'Result', ts:'Timestamp', kgr:'KG RESTANTES A EXTRUDAR', hechas:'Cantidad de bobinas extrudadas', rest:'BOBINAS RESTANTES'};
 const GROUPS = [
   ['Trabajo', ['orden','lugar','partida','cuenta','prod','med','mat','adit','trat','com']],
@@ -2610,7 +2620,7 @@ const hhmm = d => d.toLocaleTimeString('es-AR', {hour:'2-digit', minute:'2-digit
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const findRow = n => ROWS.find(r => r[K.partida] == n);
 const hkey = r => `${r[K.med]}|${r[K.prod]}`;
-const yes = v => String(v).toLowerCase() === 'verdadero' || v === true;
+const yes = v => v === true || /^(verdadero|true)$/i.test(String(v).trim());
 
 const pad2 = n => String(n).padStart(2, '0');
 const dKey = (d = new Date()) => pad2(d.getDate()) + pad2(d.getMonth() + 1) + String(d.getFullYear()).slice(2);
@@ -2678,15 +2688,12 @@ function toast(msg) {
 }
 
 /* ---------- historial de parámetros (de ejemplo) ---------- */
-const HIST = {};
-[[11910,'RODOFELLI','11702','14/10/26'],[11687,'RODOFELLI','11590','29/09/26'],[11892,'VENUS','11615','07/10/26'],[11873,'VENUS','11688','21/10/26']].forEach(([p, m, src, f], i) => {
-  const r = findRow(p); if (!r) return;
-  const b = MAQS[m].base;
-  HIST[hkey(r)] = {partida:src, fecha:f, maq:MAQS[m].name, params:{...b, tiro:Math.round(b.tiro * (i % 2 ? 0.94 : 1.07) * (MAQS[m].step.tiro ? 10 : 1)) / (MAQS[m].step.tiro ? 10 : 1), camisa1:b.camisa1 + 3, filtro:b.filtro + (i % 2 ? 5 : 0)}};
-});
+const HIST = Object.assign({}, store.get('cache-historial', {}));
+/* Configuración de esta tablet: dirección del script del Sheets, clave y máquina. */
+const CFG = Object.assign({url: '', clave: '', maq: 'RODOFELLI'}, store.get('config', {}));
 
 /* ---------- estado ---------- */
-const S = {regTab:'reg', regConfirm:false, installEvt:null, view:'carga', setup:null, wiz:null, cur:null, saved:null, maq:'RODOFELLI', scope:'maq', q:'', detail:null, corr:null, drawer:false, sk:{motivo:null, kg:''}, modal:null};
+const S = {installEvt:null, view: CFG.url ? 'carga' : 'config', cfgMsg:'', cfgDraft:null, setup:null, wiz:null, cur:null, saved:null, maq: CFG.maq, scope:'maq', q:'', detail:null, corr:null, drawer:false, sk:{motivo:null, kg:''}, modal:null};
 
 function newCorr(r) {
   const h = HIST[hkey(r)];
@@ -2703,14 +2710,15 @@ function newBobina(c, prev) {
 function bar() {
   const c = S.corr || (S.setup && S.setup.row), op = (S.cur && S.cur.op) || (S.saved && S.saved.op) || null;
   return `<div class="bar">
-    <select class="maq" data-ch="maq" aria-label="Máquina de esta tablet">${Object.entries(MAQS).map(([k, m]) => `<option value="${k}" ${S.maq === k ? 'selected' : ''}>Extrusora ${m.name}</option>`).join('')}</select>
+    <span class="maqname">Extrusora ${MAQS[S.maq].name}</span>
     <nav class="nav" aria-label="Secciones">
       <button data-act="view" data-v="pend" ${S.view === 'pend' ? 'aria-current="page"' : ''}>Trabajos pendientes</button>
       <button data-act="view" data-v="carga" ${S.view === 'carga' ? 'aria-current="page"' : ''}>Carga ${c ? '<span class="dot" aria-label="corrida abierta"></span>' : ''}</button>
-      <button data-act="view" data-v="reg" ${S.view === 'reg' ? 'aria-current="page"' : ''}>Registro de prueba</button>
     </nav>
     <span class="who">${op ? `<span class="avatar">${op[0]}</span><span>${op}</span>` : '<span>Sin operario</span>'}</span>
+    <span class="sync" id="sync" role="status">${syncText()}</span>
     ${S.installEvt ? '<button class="btn small go" data-act="install">Instalar app</button>' : ''}
+    <button class="gear" data-act="view" data-v="config" aria-label="Configuración" ${S.view === 'config' ? 'aria-current="page"' : ''}>⚙</button>
     <span class="clock" data-clock>${hhmm(new Date())}</span>
   </div>`;
 }
@@ -2750,6 +2758,8 @@ function pendHTML() {
       </div>
       <input class="search" type="search" data-in="q" placeholder="Buscar por partida, cliente o medida" value="${esc(S.q)}" aria-label="Buscar">
       <span class="hint" id="count">${n} trabajos</span>
+      <span class="hint">${SYNC.loading ? 'Actualizando…' : SYNC.hora ? `Actualizado ${SYNC.hora}` : ''}</span>
+      <button class="btn small" data-act="refresh" ${SYNC.loading ? 'disabled' : ''}>Actualizar</button>
     </div>
     <div class="grouphead"><i></i>${S.scope === 'all' ? 'Todas las máquinas' : MAQS[S.maq].name}</div>
     <div class="tablewrap"><table>
@@ -2796,7 +2806,7 @@ function pesosTable(c) {
   const out = c.done.filter(x => x.flag).length;
   return `<div class="card col"><div class="row between"><h2 class="q">Pesos de la corrida</h2>${out ? `<span class="tag bad">${out === 1 ? '1 bobina' : out + ' bobinas'} fuera de tolerancia</span>` : '<span class="tag ok">Todas dentro de tolerancia</span>'}</div>
     <div class="tablewrap flat"><table class="tight"><thead><tr><th>Bobina</th><th>Lote</th><th>Operario</th><th>Peso</th><th>Teórico</th><th>Diferencia</th><th>Estado</th><th>Etiqueta</th></tr></thead>
-    <tbody>${c.done.map(x => `<tr class="${x.flag ? 'flag' : ''}"><td class="num">${x.n}/${x.total}</td><td class="num">${x.lote}</td><td>${x.op}</td><td class="num">${fmt(x.peso, 2)} kg</td><td class="num">${fmt(x.teo, 2)} kg</td><td class="num">${x.dev > 0 ? '+' : ''}${fmt(x.dev, 1)} %</td><td>${flagTag(x.dev)}</td><td>${x.printing ? '<span class="tag mute">Imprimiendo…</span>' : `${x.prints ? '<span class="tag ok">Impresa</span> ' : ''}<button class="btn small" data-act="print" data-v="${x.lote}">${x.prints ? 'Reimprimir' : 'Imprimir'}</button>`}</td></tr>`).join('')}</tbody></table></div></div>`;
+    <tbody>${c.done.map(x => `<tr class="${x.flag ? 'flag' : ''}"><td class="num">${x.n}/${x.total}</td><td class="num">${x.lote || '<span class="hint">Enviando…</span>'}</td><td>${x.op}</td><td class="num">${fmt(x.peso, 2)} kg</td><td class="num">${fmt(x.teo, 2)} kg</td><td class="num">${x.dev > 0 ? '+' : ''}${fmt(x.dev, 1)} %</td><td>${flagTag(x.dev)}</td><td>${x.printing ? '<span class="tag mute">Imprimiendo…</span>' : `${x.prints ? '<span class="tag ok">Enviada</span> ' : ''}<button class="btn small" data-act="print" data-v="${x.localId}">${x.prints ? 'Reimprimir' : 'Imprimir'}</button>`}</td></tr>`).join('')}</tbody></table></div></div>`;
 }
 function closeHTML() {
   const c = S.corr, r = c.row, a = parseAdit(r[K.adit]);
@@ -2917,6 +2927,7 @@ function opStep() {
 function partidaStep() {
   const sel = S.setup.row;
   const rows = ROWS.filter(r => yes(r[K.pend]) && r[K.lugar] === S.maq).sort((a, b) => (a[K.orden] ?? 999) - (b[K.orden] ?? 999));
+  if (!rows.length) return `<h2 class="q">Elegí la partida</h2><div class="empty"><p class="hint">${SYNC.loading ? 'Cargando los trabajos del Sheets…' : ROWS.length ? `No hay trabajos pendientes para ${MAQS[S.maq].name}.` : 'Todavía no hay trabajos cargados. Revisá la conexión.'}</p><div class="row"><button class="btn" data-act="refresh">Actualizar trabajos</button><button class="btn" data-act="view" data-v="config">Configuración</button></div></div>`;
   return `<h2 class="q">Elegí la partida</h2><p class="hint">Trabajos pendientes de ${MAQS[S.maq].name}, en el orden de extrusión.</p>
     <div class="list">${rows.map(r => `<button class="opt pcard" aria-pressed="${sel === r}" data-act="pickrow" data-v="${r[K.partida]}">
       <span class="pn cond">${r[K.partida]}</span>
@@ -3012,7 +3023,7 @@ function guardarStep() {
         ${parseAdit(r[K.adit]) ? `<div><dt>Bolsa de aditivo al empezar</dt><dd class="cond">${c.adIni} kg</dd></div>` : ''}
         <div><dt>Parámetros</dt><dd>${c.histUsed ? 'Del historial' : 'Promedios de la máquina'}${c.edited ? ', con ajustes' : ''}</dd></div>` : ''}
     </dl>
-    <p class="hint">Se va a guardar como lote <b>${lotePrev(MAQS[S.maq].code)}</b>, bobina ${nNow()}/${r[K.cant]}.</p>`;
+    <p class="hint">Bobina ${nNow()}/${r[K.cant]}. El lote lo asigna el Sheets al guardar.</p>`;
 }
 function wizardHTML() {
   const id = stepId();
@@ -3031,7 +3042,7 @@ function labelHTML(b, r) {
     <div class="lb-head"><span>Bobina extrudada</span><span>${MAQS[S.maq].name}</span></div>
     <div class="lb-main">
       <div class="lb-data">
-        <div class="lb-lote">${b.lote}</div>
+        <div class="lb-lote">${b.lote || 'Lote pendiente'}</div>
         <dl>
           <dt>Partida</dt><dd>${r[K.partida]}</dd>
           <dt>Cliente</dt><dd>${esc(String(r[K.cuenta]).replace(/\s*\(.*\)\s*$/, ''))}</dd>
@@ -3042,19 +3053,18 @@ function labelHTML(b, r) {
           <dt>Fecha</dt><dd>${dShort(b.t1 || new Date())} ${hhmm(b.t1 || new Date())}</dd>
         </dl>
       </div>
-      <div class="lb-qr">${qrSvg(b.lote)}<span>${b.lote}</span></div>
+      <div class="lb-qr">${b.lote ? qrSvg(b.lote) + `<span>${b.lote}</span>` : '<div class="qrwait">El QR aparece cuando el Sheets asigne el lote</div>'}</div>
     </div>
   </figure>`;
 }
 function printLabel(b) {
   if (!b || b.printing) return;
-  b.printing = true; render();
-  setTimeout(() => {
-    b.printing = false; b.prints = (b.prints || 0) + 1; b.printedAt = hhmm(new Date());
-    recordPrint(b);
-    toast(`Etiqueta ${b.lote} en la cola de impresión (simulada hasta conectar la PC)`);
-    render();
-  }, 1400);
+  const r = S.corr.row;
+  b.prints = (b.prints || 0) + 1; b.printedAt = hhmm(new Date());
+  encolar({tipo: 'imprimir', localId: b.localId, copia: b.prints, datos: {maquina: S.maq, partida: r[K.partida],
+    cliente: String(r[K.cuenta]).replace(/\s*\(.*\)\s*$/, ''), medidas: r[K.med], peso: b.peso, bobina: `${b.n}/${b.total}`, operador: up(b.op), copias: 1}});
+  if (!b.lote) toast('La etiqueta se imprime en cuanto el Sheets asigne el lote');
+  render();
 }
 function savedHTML() {
   const b = S.saved, c = S.corr, r = c.row, more = b.n < b.total, printed = b.prints > 0;
@@ -3065,7 +3075,7 @@ function savedHTML() {
       <div class="row"><span class="tag ok">Bobina ${b.n}/${b.total} guardada</span>${b.flag ? flagTag(b.dev) : ''}</div>
       <p class="hint">${fmt(b.peso, 2)} kg, ${b.dev > 0 ? '+' : ''}${fmt(b.dev, 1)} % contra el teórico.</p>
       ${printBtn}
-      <p class="hint" aria-live="polite">${b.printing ? `Enviando a la impresora de ${MAQS[S.maq].name}…` : printed ? `Impresa a las ${b.printedAt}${b.prints > 1 ? ` (${b.prints} copias)` : ''}. Pegala en el cono de la bobina.` : 'Imprimí la etiqueta y pegala en el cono antes de sacar la bobina de la máquina.'}</p>
+      <p class="hint" aria-live="polite">${!b.lote ? (OUTBOX.length ? 'Guardada en la tablet. Se está enviando al Sheets para asignarle el lote.' : 'Esperando el lote del Sheets…') : printed ? `Enviada a la impresora a las ${b.printedAt}${b.prints > 1 ? ` (${b.prints} copias)` : ''}. Pegala en el cono de la bobina.` : 'Imprimí la etiqueta y pegala en el cono antes de sacar la bobina de la máquina.'}</p>
       <div class="row">
         ${more ? `<button class="btn ${printed ? 'go' : ''} huge" data-act="nextbob">Cargar la bobina ${b.n + 1}/${b.total}</button>
           <button class="btn" data-act="early">Terminar la corrida acá</button>`
@@ -3127,83 +3137,145 @@ function cargaHTML() {
 }
 
 
-/* ---------- registro (columnas del Sheets) ---------- */
-const REG_COLS = ['Fecha y hora de registro','Cuenta','N° de Partida','LOTE N°','N° de Bobina','Máquina','Medidas de bobina','Material','Aditivo + dosificador','Cantidad de bobinas','Metros por bobina','Peso teorico','Comentarios del vendedor','Cono utilizado','Material utilizado','Grosor promedio','Peso de bobina','Operador','TIRO','TORNILLO','BOBINADO','CAMISA 1','CAMISA 2','FILTRO','MATRIZ','BOQUILLA','Peso Scrap','Dosificador','Peso Neto Aditivo','Mes',
-  'ID de corrida','Inicio de bobina','Diferencia de peso (kg)','Diferencia de peso (%)','Estado del peso','Origen de los parámetros','Bolsa de aditivo al inicio (kg)','Bolsa de aditivo al cierre (kg)','Aditivo usado en la corrida (kg)','Etiqueta impresa','Copias de etiqueta','Origen del registro'];
-const SCRAP_COLS = ['ID de scrap','Fecha y hora','LOTE N°','N° de Partida','Cuenta','Máquina','Operador','Motivo','Peso scrap (kg)','Tipo de material','Material utilizado','Aditivo / color','Asignación del material','ID de corrida','Mes'];
-const COLA_COLS = ['ID de impresión','Fecha y hora del pedido','LOTE N°','Máquina','N° de Partida','Cliente','Medidas','Peso neto (kg)','Bobina','Operador','Copias','Estado','Fecha y hora de impresión','Detalle del error'];
-const DB = store.get('registro-prueba', {reg: [], scrap: [], cola: []});
-const saveDB = () => store.set('registro-prueba', DB);
+/* ---------- conexión con el Sheets ---------- */
 const MOT_CAMBIO = ['Cambio de material', 'Cambio de color'];
 const up = t => String(t).normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase();
 const n2 = v => Math.round(v * 100) / 100;
 const mes = d => `${pad2(d.getMonth() + 1)}/${d.getFullYear()}`;
 const colorDe = r => { const a = parseAdit(r[K.adit]); return a ? `${a.code} - ${a.comps.map(x => x.n).join(' + ')}` : 'Sin aditivo'; };
 const dosDe = r => { const a = parseAdit(r[K.adit]); const m = a && a.dos.match(/[\d.,]+/); return m ? num(m[0]) : ''; };
-function recordBobina(b) {
+const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+/* Cola de envíos: si no hay conexión, las cargas quedan guardadas en la tablet y se mandan solas cuando vuelve. */
+const OUTBOX = store.get('outbox', []);
+const LOTES = store.get('lotes-asignados', {});
+const SYNC = {busy: false, err: '', hora: store.get('cache-hora', ''), loading: false};
+const saveOut = () => { store.set('outbox', OUTBOX); store.set('lotes-asignados', LOTES); };
+
+async function api(accion, datos) {
+  if (!CFG.url) throw new Error('Falta configurar la conexión');
+  const ctrl = new AbortController(), t = setTimeout(() => ctrl.abort(), 30000);
+  try {
+    const res = await fetch(CFG.url, {method: 'POST', body: JSON.stringify({accion, clave: CFG.clave, datos: datos || {}}), signal: ctrl.signal});
+    const j = await res.json();
+    if (!j.ok) throw new Error(j.error || 'El Sheets respondió con un error');
+    return j;
+  } catch (e) {
+    if (e.name === 'AbortError' || e instanceof TypeError) throw new Error('Sin conexión con el Sheets');
+    throw e;
+  } finally { clearTimeout(t); }
+}
+function syncText() {
+  if (!CFG.url) return '<span class="sdot bad"></span>Sin configurar';
+  const n = OUTBOX.length;
+  if (SYNC.busy && n) return `<span class="sdot warn"></span>Enviando ${n}…`;
+  if (n) return `<span class="sdot bad"></span>${SYNC.err || 'Sin conexión'}: ${n === 1 ? '1 envío pendiente' : n + ' envíos pendientes'}`;
+  if (SYNC.err) return `<span class="sdot bad"></span>${SYNC.err}`;
+  return '<span class="sdot ok"></span>Sincronizado';
+}
+function updSync() { const el = document.getElementById('sync'); if (el) el.innerHTML = syncText(); }
+async function cargarPendientes(manual) {
+  if (!CFG.url || SYNC.loading) return;
+  SYNC.loading = true; if (S.view === 'pend') render();
+  try {
+    const j = await api('pendientes');
+    ROWS = j.filas || [];
+    Object.keys(HIST).forEach(k => delete HIST[k]); Object.assign(HIST, j.historial || {});
+    SYNC.hora = j.hora || hhmm(new Date());
+    store.set('cache-pendientes', ROWS); store.set('cache-historial', HIST); store.set('cache-hora', SYNC.hora);
+    if (!OUTBOX.length) SYNC.err = '';
+    if (manual) toast(`Trabajos actualizados: ${ROWS.length}`);
+  } catch (e) { SYNC.err = e.message; if (manual) toast(e.message); }
+  SYNC.loading = false;
+  if (S.view === 'pend' || (S.wiz && stepId() === 'partida')) render(); else updSync();
+}
+function buscarBobina(localId) {
+  const all = [];
+  if (S.corr) all.push(...S.corr.done);
+  if (S.saved) all.push(S.saved);
+  return all.find(b => b.localId === localId);
+}
+async function flush() {
+  if (SYNC.busy || !CFG.url) { updSync(); return; }
+  if (!OUTBOX.length) { updSync(); return; }
+  SYNC.busy = true; updSync();
+  let refrescar = false;
+  try {
+    while (OUTBOX.length) {
+      const op = OUTBOX[0];
+      if (op.tipo === 'bobina') {
+        const j = await api('bobina', op.datos);
+        LOTES[op.localId] = {lote: j.lote, n: j.n};
+        const b = buscarBobina(op.localId);
+        if (b) { b.lote = j.lote; b.n = j.n; }
+        toast(`Bobina guardada en el Sheets como ${j.lote}`);
+        refrescar = true;
+      } else if (op.tipo === 'imprimir') {
+        const l = LOTES[op.localId];
+        if (!l) throw new Error('La bobina todavía no tiene lote');
+        await api('imprimir', Object.assign({}, op.datos, {lote: l.lote, id: `${l.lote}-E${op.copia}`}));
+        toast(`Etiqueta ${l.lote} enviada a la impresora`);
+      } else if (op.tipo === 'cerrar') {
+        await api('cerrar', op.datos);
+      }
+      OUTBOX.shift(); saveOut();
+    }
+    SYNC.err = '';
+  } catch (e) { SYNC.err = e.message; }
+  SYNC.busy = false;
+  if (refrescar && (S.saved || (S.corr && S.corr.phase === 'cierre'))) render(); else updSync();
+}
+function encolar(op) { OUTBOX.push(op); saveOut(); flush(); }
+
+function enviarBobina(b) {
   const c = S.corr, r = c.row, sk = n2(b.scrap.reduce((t, x) => t + x.kg, 0));
-  const reg = {
-    'Fecha y hora de registro': dFull(b.t1), 'Cuenta': r[K.cuenta], 'N° de Partida': r[K.partida], 'LOTE N°': b.lote, 'N° de Bobina': b.n,
+  const fila = {
+    'Fecha y hora de registro': b.t1.toISOString(), 'Cuenta': r[K.cuenta], 'N° de Partida': r[K.partida],
     'Máquina': S.maq, 'Medidas de bobina': r[K.med], 'Material': r[K.mat] || '', 'Aditivo + dosificador': r[K.adit] || '-',
     'Cantidad de bobinas': b.total, 'Metros por bobina': r[K.metros], 'Peso teorico': b.teo, 'Comentarios del vendedor': r[K.com] || '',
     'Cono utilizado': up(b.cono), 'Material utilizado': c.material, 'Grosor promedio': '', 'Peso de bobina': b.peso, 'Operador': up(b.op),
     'TIRO': c.params.tiro, 'TORNILLO': c.params.tornillo, 'BOBINADO': c.params.bobinado, 'CAMISA 1': c.params.camisa1, 'CAMISA 2': c.params.camisa2,
     'FILTRO': c.params.filtro, 'MATRIZ': c.params.matriz, 'BOQUILLA': c.params.boquilla, 'Peso Scrap': sk, 'Dosificador': dosDe(r),
-    'Peso Neto Aditivo': '', 'Mes': mes(b.t1),
-    'ID de corrida': c.id, 'Inicio de bobina': dFull(b.t0), 'Diferencia de peso (kg)': n2(b.peso - b.teo), 'Diferencia de peso (%)': b.dev,
-    'Estado del peso': b.flag || 'Dentro de tolerancia', 'Origen de los parámetros': (c.histUsed ? `Historial (partida ${c.hist.partida})` : 'Promedio de la máquina') + (c.edited || c.changes.length > 1 ? ', con ajustes' : ''),
-    'Bolsa de aditivo al inicio (kg)': parseAdit(r[K.adit]) ? num(c.adIni) : '', 'Bolsa de aditivo al cierre (kg)': '', 'Aditivo usado en la corrida (kg)': '',
-    'Etiqueta impresa': 'No', 'Copias de etiqueta': 0, 'Origen del registro': 'App tablet'};
-  DB.reg.unshift(reg);
+    'Mes': mes(b.t1), 'ID de corrida': c.id, 'Inicio de bobina': b.t0.toISOString(), 'Diferencia de peso (kg)': n2(b.peso - b.teo),
+    'Diferencia de peso (%)': b.dev, 'Estado del peso': b.flag || 'Dentro de tolerancia',
+    'Origen de los parámetros': (c.histUsed ? `Historial (partida ${c.hist.partida})` : 'Promedio de la máquina') + (c.edited || c.changes.length > 1 ? ', con ajustes' : ''),
+    'Bolsa de aditivo al inicio (kg)': parseAdit(r[K.adit]) ? num(c.adIni) : '', 'Etiqueta impresa': 'No', 'Copias de etiqueta': 0, 'Origen del registro': 'App tablet'};
   /* El scrap toma el material con el que se guarda la bobina. En un cambio de MP o de color, esa bobina ya es la del material nuevo. */
-  b.scrap.forEach((x, i) => DB.scrap.unshift({
-    'ID de scrap': `${b.lote}-S${i + 1}`, 'Fecha y hora': dFull(x.d), 'LOTE N°': b.lote, 'N° de Partida': r[K.partida], 'Cuenta': r[K.cuenta],
-    'Máquina': S.maq, 'Operador': up(b.op), 'Motivo': x.motivo, 'Peso scrap (kg)': x.kg, 'Tipo de material': r[K.mat] || '',
-    'Material utilizado': c.material, 'Aditivo / color': colorDe(r),
+  const scrap = b.scrap.map(x => ({
+    'Fecha y hora': x.d.toISOString(), 'N° de Partida': r[K.partida], 'Cuenta': r[K.cuenta], 'Máquina': S.maq, 'Operador': up(b.op),
+    'Motivo': x.motivo, 'Peso scrap (kg)': x.kg, 'Tipo de material': r[K.mat] || '', 'Material utilizado': c.material, 'Aditivo / color': colorDe(r),
     'Asignación del material': MOT_CAMBIO.includes(x.motivo) ? 'Material nuevo (bobina en curso)' : 'Material de la bobina',
     'ID de corrida': c.id, 'Mes': mes(x.d)}));
-  saveDB();
+  encolar({tipo: 'bobina', localId: b.localId, datos: {codigoMaquina: MAQS[S.maq].code, idRegistro: b.localId, fila, scrap}});
 }
-function closeRecords(c) {
-  const a = parseAdit(c.row[K.adit]); if (!a || !c.done.length) return;
-  const used = n2(num(c.adIni) - num(c.adFin)), kg = c.done.reduce((t, x) => t + x.peso, 0);
-  DB.reg.filter(x => x['ID de corrida'] === c.id).forEach(x => {
-    x['Bolsa de aditivo al cierre (kg)'] = num(c.adFin); x['Aditivo usado en la corrida (kg)'] = used;
-    x['Peso Neto Aditivo'] = kg ? Math.round(used * x['Peso de bobina'] / kg * 1000) / 1000 : '';
-  });
-  saveDB();
+function enviarCierre(c) {
+  const r = c.row, a = parseAdit(r[K.adit]);
+  encolar({tipo: 'cerrar', datos: {idCorrida: c.id,
+    bolsaCierre: a && c.done.length ? num(c.adFin) : '', aditivoUsado: a && c.done.length ? n2(num(c.adIni) - num(c.adFin)) : '',
+    historial: {clave: hkey(r), medidas: r[K.med], producto: r[K.prod] || '', maquina: MAQS[S.maq].name, partida: String(r[K.partida]), params: {...c.params}}}});
 }
-function recordPrint(b) {
-  const r = S.corr ? S.corr.row : null, reg = DB.reg.find(x => x['LOTE N°'] === b.lote);
-  if (reg) { reg['Etiqueta impresa'] = 'Sí'; reg['Copias de etiqueta'] = b.prints; }
-  DB.cola.unshift({'ID de impresión': `${b.lote}-E${b.prints}`, 'Fecha y hora del pedido': dFull(new Date()), 'LOTE N°': b.lote, 'Máquina': S.maq,
-    'N° de Partida': r ? r[K.partida] : '', 'Cliente': r ? String(r[K.cuenta]).replace(/\s*\(.*\)\s*$/, '') : '', 'Medidas': r ? r[K.med] : '',
-    'Peso neto (kg)': b.peso, 'Bobina': `${b.n}/${b.total}`, 'Operador': up(b.op), 'Copias': 1, 'Estado': 'Pendiente', 'Fecha y hora de impresión': '', 'Detalle del error': ''});
-  saveDB();
-}
-const cell = v => typeof v === 'number' ? String(v).replace('.', ',') : String(v ?? '');
-function regHTML() {
-  const tabs = [['reg', 'Reg - EXT', DB.reg, REG_COLS], ['scrap', 'Scrap', DB.scrap, SCRAP_COLS], ['cola', 'Cola de impresión', DB.cola, COLA_COLS]];
-  const [k, name, rows, cols] = tabs.find(t => t[0] === S.regTab);
-  const isNew = c => REG_COLS.indexOf(c) >= 30 || k !== 'reg';
-  return `<div class="body">
-    <div class="row between"><div><h2 class="q">Registro de prueba</h2>
-      <p class="hint">Así quedarían las filas en el Sheets. Se guardan solo en esta tablet hasta que conectemos la app.</p></div>
-      <button class="btn small" data-act="regclear">${S.regConfirm ? 'Tocá de nuevo para borrar todo' : 'Borrar registro de prueba'}</button></div>
-    <div class="toolbar">
-      <div class="seg" role="group" aria-label="Hoja">${tabs.map(t => `<button data-act="regtab" data-v="${t[0]}" aria-pressed="${S.regTab === t[0]}">${t[1]} (${t[2].length})</button>`).join('')}</div>
-      <button class="btn small" data-act="regcopy" ${rows.length ? '' : 'disabled'}>Copiar filas para pegar en ${name}</button>
-    </div>
-    ${rows.length ? `<div class="tablewrap regtable"><table><thead><tr>${cols.map(c => `<th class="${isNew(c) ? 'newcol' : ''}">${c}</th>`).join('')}</tr></thead>
-      <tbody>${rows.map(x => `<tr>${cols.map(c => `<td>${esc(cell(x[c]))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`
-      : `<div class="empty"><p class="hint">Todavía no hay filas en ${name}. Guardá una bobina desde Carga.</p></div>`}
-  </div>`;
+
+/* ---------- configuración ---------- */
+function configHTML() {
+  const d = S.cfgDraft || (S.cfgDraft = {...CFG});
+  return `<div class="body"><div class="cfg card col">
+    <h2 class="q">Configuración de esta tablet</h2>
+    <p class="hint">Se carga una sola vez al instalar la app. La dirección y la clave salen de la implementación del script en el Sheets.</p>
+    <h3>Máquina</h3>
+    <div class="chips">${Object.entries(MAQS).map(([k, m]) => `<button class="chip" aria-pressed="${d.maq === k}" data-act="cfgmaq" data-v="${k}">Extrusora ${m.name}</button>`).join('')}</div>
+    <label class="field"><span>Dirección del script (termina en /exec)</span>
+      <input type="url" data-in="cfg.url" value="${esc(d.url)}" placeholder="https://script.google.com/macros/s/…/exec" autocomplete="off" spellcheck="false"></label>
+    <label class="field"><span>Clave</span>
+      <input type="text" data-in="cfg.clave" value="${esc(d.clave)}" placeholder="La misma que pusiste en el script" autocomplete="off" spellcheck="false"></label>
+    <div class="row"><button class="btn" data-act="cfgtest">Probar conexión</button><button class="btn go" data-act="cfgsave">Guardar</button></div>
+    ${S.cfgMsg ? `<p class="hint cfgmsg">${S.cfgMsg}</p>` : ''}
+    ${OUTBOX.length ? `<div class="warnbox"><b>${OUTBOX.length === 1 ? 'Hay 1 envío pendiente' : `Hay ${OUTBOX.length} envíos pendientes`}.</b><span>Se mandan solos cuando la conexión funcione.</span><div class="row"><button class="btn small" data-act="retry">Reintentar ahora</button></div></div>` : ''}
+  </div></div>`;
 }
 
 /* ---------- render ---------- */
 function render() {
   const scr = $('#scr');
-  let html = bar() + (S.view === 'pend' ? `<div class="body">${pendHTML()}</div>` : S.view === 'reg' ? regHTML() : cargaHTML());
+  let html = bar() + (S.view === 'pend' ? `<div class="body">${pendHTML()}</div>` : S.view === 'config' ? configHTML() : cargaHTML());
   if (S.view === 'pend' && S.detail) html += detailHTML();
   if (S.view === 'carga') {
     if (S.drawer && S.cur) html += drawerHTML();
@@ -3231,7 +3303,7 @@ scr.addEventListener('click', e => {
     else if (t === 'adIni') S.setup.adIni = padPress(S.setup.adIni, b.dataset.k);
     else S.sk.kg = padPress(S.sk.kg, b.dataset.k);
   }
-  else if (a === 'view') { S.view = v; S.detail = null; }
+  else if (a === 'view') { S.view = v; S.detail = null; if (v === 'config') { S.cfgDraft = null; S.cfgMsg = ''; } if (v === 'pend') cargarPendientes(); }
   else if (a === 'scope') S.scope = v;
   else if (a === 'detail') S.detail = Number(v);
   else if (a === 'closedetail') S.detail = null;
@@ -3269,38 +3341,47 @@ scr.addEventListener('click', e => {
         S.setup = null;
       }
       const x = pesoInfo(), bob = S.cur;
-      Object.assign(bob, {n: nNow(), total: x.r[K.cant], lote: loteNew(S.corr.code), peso: x.p, teo: x.teo, dev: x.dev, flag: flagOf(x.dev), t1: new Date()});
+      Object.assign(bob, {n: nNow(), total: x.r[K.cant], lote: null, localId: newId(), peso: x.p, teo: x.teo, dev: x.dev, flag: flagOf(x.dev), t1: new Date()});
       S.corr.done.push(bob);
-      recordBobina(bob);
-      toast(`Bobina ${bob.n}/${bob.total} guardada como ${bob.lote}`);
+      enviarBobina(bob);
+      toast(`Bobina ${bob.n}/${bob.total} guardada. Enviando al Sheets…`);
       S.saved = bob; S.cur = null; S.wiz = null; S.drawer = false;
     }
   }
-  else if (a === 'regtab') { S.regTab = v; S.regConfirm = false; }
-  else if (a === 'regclear') {
-    if (!S.regConfirm) S.regConfirm = true;
-    else { DB.reg.length = 0; DB.scrap.length = 0; DB.cola.length = 0; saveDB(); S.regConfirm = false; toast('Registro de prueba borrado'); }
+  else if (a === 'cfgmaq') {
+    if (S.corr && v !== S.maq) { toast('Cerrá la corrida abierta antes de cambiar de máquina'); return; }
+    S.cfgDraft.maq = v;
   }
-  else if (a === 'regcopy') {
-    const t = {reg: [DB.reg, REG_COLS], scrap: [DB.scrap, SCRAP_COLS], cola: [DB.cola, COLA_COLS]}[S.regTab];
-    const tsv = t[0].slice().reverse().map(x => t[1].map(col => cell(x[col]).replace(/[\t\n]/g, ' ')).join('\t')).join('\n');
-    (navigator.clipboard ? navigator.clipboard.writeText(tsv) : Promise.reject()).then(
-      () => toast(`${t[0].length === 1 ? '1 fila copiada' : t[0].length + ' filas copiadas'}. Pegalas en la primera fila vacía de la hoja.`),
-      () => toast('No se pudo copiar. Probá desde la app instalada.'));
+  else if (a === 'cfgtest' || a === 'cfgsave') {
+    const d = S.cfgDraft, prev = {...CFG};
+    Object.assign(CFG, {url: d.url.trim(), clave: d.clave.trim()});
+    S.cfgMsg = 'Probando la conexión…'; render();
+    api('ping').then(j => {
+      S.cfgMsg = `Conectado a "${esc(j.hoja)}".`;
+      if (a === 'cfgsave') {
+        CFG.maq = d.maq; store.set('config', CFG);
+        if (S.maq !== CFG.maq) { S.maq = CFG.maq; if (S.setup && S.setup.row && S.setup.row[K.lugar] !== S.maq) setRow(null); }
+        S.cfgDraft = null; S.cfgMsg = ''; S.view = 'carga';
+        toast('Configuración guardada'); cargarPendientes(); flush();
+      } else Object.assign(CFG, prev);
+      render();
+    }).catch(e => { Object.assign(CFG, prev); S.cfgMsg = `No se pudo conectar: ${esc(e.message)}. Revisá la dirección y la clave.`; render(); });
     return;
   }
+  else if (a === 'retry') { flush(); return; }
+  else if (a === 'refresh') { cargarPendientes(true); return; }
   else if (a === 'install') {
     const e = S.installEvt; S.installEvt = null;
     if (e) { e.prompt(); e.userChoice.finally(render); } return;
   }
-  else if (a === 'print') { printLabel(v ? c.done.find(x => x.lote === v) : S.saved); return; }
+  else if (a === 'print') { printLabel(v ? c.done.find(x => x.localId === v) : S.saved); return; }
   else if (a === 'nextbob') { S.cur = newCur(S.saved); S.saved = null; S.wiz = {steps: STEPS_NEXT, i: 0}; }
   else if (a === 'early') { c.phase = 'cierre'; c.early = true; }
   else if (a === 'tocierre') { c.phase = 'cierre'; c.early = false; }
   else if (a === 'resume') { c.phase = 'bobina'; c.early = false; }
   else if (a === 'closecorr') {
     const r = c.row, kg = c.done.reduce((s, x) => s + x.peso, 0);
-    closeRecords(c);
+    enviarCierre(c);
     HIST[hkey(r)] = {partida: String(r[K.partida]), fecha: dShort(), maq: MAQS[S.maq].name, params: {...c.params}};
     r[K.hechas] += c.done.length;
     r[K.rest] = Math.max(0, r[K.cant] - r[K.hechas]);
@@ -3341,6 +3422,7 @@ scr.addEventListener('keydown', e => {
 scr.addEventListener('input', e => {
   const t = e.target, k = t.dataset.in; if (!k) return;
   if (k === 'q') { S.q = t.value; $('#tb').innerHTML = rowsHTML(); $('#count').textContent = `${visibleRows().length} trabajos`; return; }
+  if (k === 'cfg.url' || k === 'cfg.clave') { S.cfgDraft[k.slice(4)] = t.value; return; }
   if (k === 'pin') { S.cur.pin = t.value; return; }
   if (/^[pm]\./.test(k)) t.value = t.value.replace(/[^0-9.,]/g, '').replace(/([.,]\d*)[.,]/g, '$1');
   const val = t.value.trim();
@@ -3349,17 +3431,13 @@ scr.addEventListener('input', e => {
   if (pre === 'p') { ctx().params[pk] = val === '' ? '' : num(val); ctx().edited = true; updateFwd(); }
   if (pre === 'm') { S.modal.params[pk] = val === '' ? '' : num(val); }
 });
-scr.addEventListener('change', e => {
-  if (e.target.dataset.ch === 'maq') {
-    if (S.corr) { e.target.value = S.maq; toast('Cerrá la corrida abierta antes de cambiar de máquina'); return; }
-    S.maq = e.target.value;
-    if (S.setup && S.setup.row && S.setup.row[K.lugar] !== S.maq) setRow(null);
-    render();
-  }
-});
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); S.installEvt = e; render(); });
 window.addEventListener('appinstalled', () => { S.installEvt = null; render(); toast('App instalada'); });
 if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => {});
+window.addEventListener('online', flush);
+setInterval(flush, 20000);
+setInterval(() => { if (S.view === 'pend' && !S.detail) cargarPendientes(); }, 300000);
+if (CFG.url) { cargarPendientes(); flush(); }
 render();
 setInterval(() => document.querySelectorAll('[data-clock]').forEach(c => c.textContent = hhmm(new Date())), 15000);
 </script>
